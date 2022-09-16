@@ -19,38 +19,38 @@
     <div class="formulario">
         <form action="cadastro.php" method="post">
 
-            <p><label for="inome">Nome Completo*: </label>
+            <div><label for="inome">Nome Completo*: </label>
                 <input type="text" name="nome" id="inome" required maxlength="50"> 
-            </p>
+            </div>
 
-            <p><label for="iemail">Email Mais Legal*: </label>
+            <div><label for="iemail">Email Mais Legal*: </label>
                 <input type="email" name="email" id="iemail" required>
-            </p>
+            </div>
 
-            <p><label for="itelefone">Telefone: </label>
+            <div><label for="itelefone">Telefone: </label>
                 <input type="tel" name="telefone" id="itelefone" pattern="ˆ\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxxx-xxxx">
-            </p>
+            </div>
 
-            <p>Deseja Receber Nosso Newsletter? <br>
+            <div>Deseja Receber Nosso Newsletter? <br>
                 <input type="radio" id="isim" name="escolha" value="sim">
                 <label for="isim">Sim</label><br>
                 <input type="radio" id="inao" name="escolha" value="não">
                 <label for="inao">Não</label><br>
-            </p>
+            </div>
 
-            <p><label for="ikit">Selecione o Tipo de Kit Desejado*</label>
+            <div><label for="ikit">Selecione o Tipo de Kit Desejado*</label>
                 <select name="kit" id="ikit" required>
                     <option disabled selected value>Escolha o Kit</option>
                     <option value="S">Kit Simples</option>
                     <option value="M">Kit Médio</option>
                     <option value="D">Kit Deluxe</option>
                 </select>
-            </p>
-            <p><label for="icor">Cor Desejada*: </label>
+            </div>
+            <div><label for="icor">Cor Desejada*: </label>
                 <input type="color" name="cor" id="icor" value="#00000" required>
-            </p>
+            </div>
 
-            <p>
+            <div>
                 <fieldset>
                     <legend>Selecione o Brinde que Gostaria de receber</legend>
                     <input type="checkbox" name="bpol" id="ibpol"><label for="ibpol">Polaroid</label><br>
@@ -58,12 +58,12 @@
                     <input type="checkbox" name="bmarc" id="ibmarc"><label for="ibmarc">Marca Página</label><br>
                     <input type="checkbox" name="bbotton" id="ibbotton"><label for="ibbotton">Botton</label>
                 </fieldset>
-            </p>
+            </div>
 
-            <p>
+            <div>
                 <label for="imsg">Alguma Observação?</label><br>
                 <textarea name="msg" id="imsg" cols="20" rows="2"></textarea>
-            </p>
+            </div>
 
             <div class="botoes">
                 <input type="submit" value="Enviar">
