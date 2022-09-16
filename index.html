@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet"> 
+    <title>Formulário</title>
+</head>
+<body>
+    <div class="topo">
+        <h1>Interesse de Compra</h1>
+        <p>Olá! Preencha o formulário abaixo apenas e se somente apenas, houver interesse real em adquirir o material.</p>
+    </div>
+
+    <div class="formulario">
+        <form action="cadastro.php" method="post">
+
+            <p><label for="inome">Nome Completo*: </label>
+                <input type="text" name="nome" id="inome" required maxlength="50"> 
+            </p>
+
+            <p><label for="iemail">Email Mais Legal*: </label>
+                <input type="email" name="email" id="iemail" required>
+            </p>
+
+            <p><label for="itelefone">Telefone: </label>
+                <input type="tel" name="telefone" id="itelefone" pattern="ˆ\(\d{2}\)\d{4,5}-\d{4}$" placeholder="(xx)xxxxx-xxxx">
+            </p>
+
+            <p>Deseja Receber Nosso Newsletter? <br>
+                <input type="radio" id="isim" name="escolha" value="sim">
+                <label for="isim">Sim</label><br>
+                <input type="radio" id="inao" name="escolha" value="não">
+                <label for="inao">Não</label><br>
+            </p>
+
+            <p><label for="ikit">Selecione o Tipo de Kit Desejado*</label>
+                <select name="kit" id="ikit" required>
+                    <option disabled selected value>Escolha o Kit</option>
+                    <option value="S">Kit Simples</option>
+                    <option value="M">Kit Médio</option>
+                    <option value="D">Kit Deluxe</option>
+                </select>
+            </p>
+            <p><label for="icor">Cor Desejada*: </label>
+                <input type="color" name="cor" id="icor" value="#00000" required>
+            </p>
+
+            <p>
+                <fieldset>
+                    <legend>Selecione o Brinde que Gostaria de receber</legend>
+                    <input type="checkbox" name="bpol" id="ibpol"><label for="ibpol">Polaroid</label><br>
+                    <input type="checkbox" name="bcard" id="ibcard"><label for="ibcard">Card</label><br>
+                    <input type="checkbox" name="bmarc" id="ibmarc"><label for="ibmarc">Marca Página</label><br>
+                    <input type="checkbox" name="bbotton" id="ibbotton"><label for="ibbotton">Botton</label>
+                </fieldset>
+            </p>
+
+            <p>
+                <label for="imsg">Alguma Observação?</label><br>
+                <textarea name="msg" id="imsg" cols="20" rows="2"></textarea>
+            </p>
+
+            <div class="botoes">
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Limpar">
+            </div>
+        </form>
+
+        <p><em>Os Itens sinalados com (*) são obrigatórios </em></p>
+    </div>
+
+
+</body>
+</html>
